@@ -1,0 +1,21 @@
+{
+  "name": "JokesBot",
+  "version": "1.0.0",
+  "description": "A simple Telegram Bot which tells you funny jokes thanks to ML",
+  "main": "index.js",
+  "engines": {
+    "node": "4.4.4"
+  },
+  "dependencies": {
+    "telebot": "^1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emoreno911/JokesBot.git"
+  },
+  "author": {
+    "name": "emoreno911"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/emoreno911/JokesBot",
+}
