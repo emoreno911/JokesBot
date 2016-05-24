@@ -6,7 +6,18 @@ const jokesFile = path.join(__dirname, 'jokes.json');
 
 const TeleBot = require('telebot');
 const TeleKey = process.env.TELEGRAM_API_KEY || fs.readFileSync(path.join(__dirname, '.env'), "utf8");
-const bot = new TeleBot(TeleKey);
+
+// Webhook to activate the sleeping server
+const bot = (process.env.NODE_ENV === 'production')?
+  new TeleBot({
+  	token: TeleKey,
+  	webhook: {
+  		url: 'https://emoreno911-jokes-bot.herokuapp.com/' + TeleKey,
+  		host: '0.0.0.0',
+  		port: 443
+  	}
+  }) : new TeleBot(TeleKey);
+
 
 // Command keyboard
 const markup = bot.keyboard([
