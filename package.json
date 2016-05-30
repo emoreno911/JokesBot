@@ -1,7 +1,7 @@
 {
   "name": "JokesBot",
   "version": "1.0.0",
-  "description": "A simple Telegram Bot which tells you funny jokes thanks to ML",
+  "description": "A simple Telegram Bot which tells you funny jokes",
   "main": "index.js",
   "engines": {
     "node": ">= 6.0.0"
