@@ -8,13 +8,12 @@ const TeleBot = require('telebot');
 const TeleKey = process.env.TELEGRAM_API_KEY || fs.readFileSync(path.join(__dirname, '.env'), "utf8");
 
 // Webhook to activate the sleeping server
-const bot = (process.env.NODE_ENV === 'productionx')?
+const bot = (process.env.NODE_ENV === 'production')?
   new TeleBot({
   	token: TeleKey,
   	webhook: {
-  		url: 'https://emoreno911-jokes-bot.herokuapp.com/' + TeleKey,
-  		host: '0.0.0.0',
-  		port: 443
+  		url: 'http://emoreno911-jokes-bot.herokuapp.com/',
+  		port: 3000
   	}
   }) : new TeleBot(TeleKey);
 
@@ -37,7 +36,7 @@ bot.on(['/start', '/help'], function(msg) {
 // On command "about"
 bot.on('/about', function(msg) {
 
-  let text = 'Jok3sBot is powered by TeleBot library';
+  let text = 'Jok3sBot is a simple Telegram Bot which tells you funny jokes';
   return bot.sendMessage(msg.chat.id, text);
 
 });
