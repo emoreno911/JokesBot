@@ -8,7 +8,8 @@ const TeleBot = require('telebot');
 const TeleKey = process.env.TELEGRAM_API_KEY || fs.readFileSync(path.join(__dirname, '.env'), "utf8");
 
 // Webhook to activate the sleeping server
-const bot = (process.env.NODE_ENV === 'production')?
+// have to fix this, it isn't working
+const bot = (process.env.NODE_ENV === 'productionx')?
   new TeleBot({
   	token: TeleKey,
   	webhook: {
