@@ -12,8 +12,7 @@ const bot = (process.env.NODE_ENV === 'production')?
   new TeleBot({
   	token: TeleKey,
   	webhook: {
-  		url: 'http://emoreno911-jokes-bot.herokuapp.com/',
-  		port: 3000
+  		url: 'https://emoreno911-jokes-bot.herokuapp.com/'
   	}
   }) : new TeleBot(TeleKey);
 
